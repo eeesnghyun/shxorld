@@ -1,0 +1,272 @@
+/* main.jsp */
+.container_m {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* intro - first.jsp */
+.container_1 {
+	width: 100%;
+	height: 100%;
+	position: absolute;	
+	top: 35%;
+}
+
+/* intro - profile.jsp, project.jsp */
+.container_2 {
+	width: 100%;
+	height: 100%;	
+	padding-top: 5%;	
+}
+
+.row_i {
+	width: 350px;
+	height: 350px;
+	margin: 0px auto; 
+  background-color: #ffffff;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 15px;
+  position: relative;
+	top: 25%;
+}
+
+.col_c {
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	max-width: 100%;
+	text-align: center;
+}
+
+.container_basic {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* 로그인 */
+.container_login {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	position: absolute;
+	top: 25%;
+}
+
+.row_login {
+	width: 350px;
+	height: 380px;
+	margin: 0px auto;   
+    background-color: rgba(204,204,204,0.5);
+    border-radius: 15px;
+}
+
+.btn_img {
+	border: none;
+	background: none;
+	outline: none;
+}
+
+/* 버튼 효과 제거 */
+.btn_img:focus {
+	outline: none;
+}
+
+/* btn-outline-warning ver.2 */
+.btn-outline-warning2{
+	color:#ffc107;
+	background-color:#1d375d;
+	background-image:none;
+	/* border-color:#ffc107; */
+	width: 160px;
+	height: 70%;
+	max-height: 70%;
+	font-size: 55px;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.btn-outline-warning2:hover{
+	color:#212529;
+	background-color:#ffc107;
+	border-color:#ffc107
+}
+.btn-outline-warning2.focus,.btn-outline-warning2:focus{
+	box-shadow:0 0 0 .2rem rgba(255,193,7,.5)
+}
+.btn-outline-warning2.disabled,.btn-outline-warning2:disabled{
+	color:#ffc107;
+	background-color:transparent
+}
+.btn-outline-warning2:not(:disabled):not(.disabled).active,.btn-outline-warning2:not(:disabled):not(.disabled):active,.show>.btn-outline-warning2.dropdown-toggle{
+	color:#212529;
+	background-color:#ffc107;
+	border-color:#ffc107
+}
+.btn-outline-warning2:not(:disabled):not(.disabled).active:focus,.btn-outline-warning2:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-warning2.dropdown-toggle:focus{
+	box-shadow:0 0 0 .2rem rgba(255,193,7,.5)
+}
+
+/* btn-outline-warning ver.3 */
+.btn-outline-warning3{
+	color:#1d375d;
+	background-color:#ffc107;
+	background-image:none;
+	/* border-color:#ffc107; */
+	width: 160px;
+	height: 35%;
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.btn-outline-warning3:hover{
+	color:#ffc107;
+	background-color:#1d375d;
+	border-color:#1d375d;
+}
+.btn-outline-warning3.focus,.btn-outline-warning3:focus{
+	box-shadow:0 0 0 .2rem rgba(255,193,7,.5)
+}
+.btn-outline-warning3.disabled,.btn-outline-warning3:disabled{
+	color:#ffc107;
+	background-color:transparent
+}
+.btn-outline-warning3:not(:disabled):not(.disabled).active,.btn-outline-warning3:not(:disabled):not(.disabled):active,.show>.btn-outline-warning3.dropdown-toggle{
+	color:#212529;
+	background-color:#ffc107;
+	border-color:#ffc107
+}
+.btn-outline-warning3:not(:disabled):not(.disabled).active:focus,.btn-outline-warning3:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-warning3.dropdown-toggle:focus{
+	box-shadow:0 0 0 .2rem rgba(255,193,7,.5)
+}
+
+/* jumbotron ver.2 */
+.jumbotron {
+  background-color: #f2dc74;
+  border-radius: 2.3rem;
+}
+
+.jumbotron2 {
+	padding: 2rem 1rem;
+	/*margin-bottom: 2rem;*/
+	background-color: #093b7d;
+	border-radius: 0.3rem;
+	width: 80%;
+	margin: 0px auto;
+}
+
+.page-item.active .page-link {
+	z-index: 1;
+	color: #fff;
+	background-color: #f2dc74;
+	border-color: #f2dc74;
+}
+
+/* 페이징 색상 두번째 START */
+.pagination2 {
+	display: -ms-flexbox;
+	display: flex;
+	padding-left: 0;
+	list-style: none;
+	border-radius: 0.25rem;
+}
+
+.page-link2 {
+	position: relative;
+	display: block;
+	padding: 0.5rem 0.75rem;
+	margin-left: -1px;
+	line-height: 1.25;
+	color: #408df2;
+	background-color: #fff;
+	border: 1px solid #dee2e6;
+}
+
+.page-link2:hover {
+	z-index: 2;
+	color: #4d86a0;
+	text-decoration: none;
+	background-color: #e9ecef;
+	border-color: #dee2e6;
+}
+
+.page-link2:focus {
+	z-index: 2;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.page-link2:not (:disabled ):not (.disabled ) {
+	cursor: pointer;
+}
+
+.page-item2:first-child .page-link2 {
+	margin-left: 0;
+	border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+}
+
+.page-item2:last-child .page-link2 {
+	border-top-right-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+}
+
+.page-item2.active .page-link2 {
+	z-index: 1;
+	color: #fff;
+	background-color: #093b7d;
+	border-color: #093b7d;
+}
+
+.page-item2.disabled .page-link2 {
+	color: #6c757d;
+	pointer-events: none;
+	cursor: auto;
+	background-color: #fff;
+	border-color: #dee2e6;
+}
+
+.pagination2-lg .page-link2 {
+	padding: 0.75rem 1.5rem;
+	font-size: 1.25rem;
+	line-height: 1.5;
+}
+
+.pagination2-lg .page-item2:first-child .page-link2 {
+	border-top-left-radius: 0.3rem;
+	border-bottom-left-radius: 0.3rem;
+}
+
+.pagination-lg2 .page-item2:last-child .page-link2 {
+	border-top-right-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+}
+
+.pagination2-sm .page-link2 {
+	padding: 0.25rem 0.5rem;
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+
+.pagination2-sm .page-item2:first-child .page-link2 {
+	border-top-left-radius: 0.2rem;
+	border-bottom-left-radius: 0.2rem;
+}
+
+.pagination2-sm .page-item2:last-child .page-link2 {
+	border-top-right-radius: 0.2rem;
+	border-bottom-right-radius: 0.2rem;
+}
+/* 페이징 색상 두번째 END*/
+
+/* 프로세스 바 */
+.bg-color-blue{
+	background-color:#0000ff!important
+}

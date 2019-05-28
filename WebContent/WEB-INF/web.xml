@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>shXorld</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 
+  <listener>
+    <listener-class>web.common.MySessionListener</listener-class>
+  </listener>
+ -->
+  
+  <servlet>
+    <servlet-name>Download</servlet-name>
+    <servlet-class>web.common.Download</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Download</servlet-name>
+    <url-pattern>/download</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>index</servlet-name>
+    <jsp-file>/index.jsp</jsp-file>
+    <init-param>
+      <param-name>log4j-init-file</param-name>
+      <param-value>WEB-INF/classes/log4j.properties</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>index</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 서블렛 관리 -->
+  <servlet>
+  	<servlet-name>intro_main</servlet-name>
+  	<jsp-file>/intro/main.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>intro_main</servlet-name>
+  	<url-pattern>/intro/main</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>guest_main</servlet-name>
+  	<jsp-file>/guest/board.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>guest_main</servlet-name>
+  	<url-pattern>/guest/board</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>project_main</servlet-name>
+  	<jsp-file>/project/list.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>project_main</servlet-name>
+  	<url-pattern>/project/list</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+  	<servlet-name>login_main</servlet-name>
+  	<jsp-file>/admin/login.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>login_main</servlet-name>
+  	<url-pattern>/admin/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>login_proc</servlet-name>
+  	<jsp-file>/admin/login_proc.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>login_proc</servlet-name>
+  	<url-pattern>/admin/login_proc</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>project_pop</servlet-name>
+  	<jsp-file>/project/read.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>project_pop</servlet-name>
+  	<url-pattern>/project/read</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>help</servlet-name>
+  	<jsp-file>/help/main.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>help</servlet-name>
+  	<url-pattern>/help/main</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>portfolio</servlet-name>
+  	<jsp-file>/intro/portfolio.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>portfolio</servlet-name>
+  	<url-pattern>/intro/portfolio</url-pattern>
+  </servlet-mapping>
+
+  <!-- JSP Security -->
+  <security-constraint>
+  	<display-name>JSP Protection</display-name>
+  	<web-resource-collection>
+  		<web-resource-name>SecurePage</web-resource-name>
+  		<url-pattern>/admin/login_proc.jsp</url-pattern>
+  	</web-resource-collection>
+  	<auth-constraint>
+  		<role-name>nobody</role-name>
+  	</auth-constraint>
+  </security-constraint>
+  
+  <security-role>
+  	<description>
+  	Acccess NO!
+  	</description>
+  	<role-name>nobody</role-name>
+  </security-role>
+  
+  <error-page>
+  	<error-code>403</error-code>
+  	<location>/common/403.jsp</location>
+  </error-page> 
+  
+  <!-- CK Editor -->
+  <servlet>
+    <servlet-name>ConnectorServlet</servlet-name>
+    <servlet-class>com.ckfinder.connector.ConnectorServlet</servlet-class>
+    <init-param>
+      <param-name>XMLConfig</param-name>
+      <param-value>/WEB-INF/config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>    
+  <servlet-mapping>
+    <servlet-name>ConnectorServlet</servlet-name>
+    <url-pattern>/ckfinder/core/connector/java/connector.java</url-pattern>
+  </servlet-mapping>
+  
+  <!-- DB Connection Pool -->
+  <servlet>
+    <servlet-name>DBCPool</servlet-name>
+    <servlet-class>web.common.DBCPool</servlet-class>
+    <init-param>
+      <param-name>poolName</param-name>
+      <param-value>shXorld</param-value>
+    </init-param>
+    <init-param>
+      <param-name>jdbcDriver</param-name>
+      <param-value>org.mariadb.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>jdbcURL</param-name>
+      <param-value>jdbc:mysql://localhost:3306/shxdb?useSSL=false</param-value>
+    </init-param>
+    <init-param>
+      <param-name>user</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>5357</param-value>
+    </init-param>
+    <init-param>
+      <param-name>maxActive</param-name>
+      <param-value>100</param-value>
+    </init-param>
+    <init-param>
+      <param-name>maxIdle</param-name>
+      <param-value>100</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+    
+</web-app>
