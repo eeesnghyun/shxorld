@@ -12,7 +12,7 @@
 + MyBatis
 
 ## 📙 오픈소스
-+ Bootstrap 4.4
++ Bootstrap 4.3
 + Fullpage.js
 
 ## 📷 스크린샷
