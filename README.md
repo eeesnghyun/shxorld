@@ -1,8 +1,18 @@
-# shxorld
-제목 : 포트폴리오 사이트
-개발기간 : 2019.02.01 ~ 2019.05.01
+# SHXWORLD : 포트폴리오
+>개인 포트폴리오입니다. 😄
+-----
+## ⚙ 환경
++ Spring framework
++ jdk 1.8
++ Tomcat 9.0
++ MariaDB
 
-Spring Framework
-MariaDB
-Jsp, Jquery
-CAFE24
+## 🛠 기술
++ jQuery
++ MyBatis
+
+## 📙 오픈소스
++ Bootstrap 4.4
++ Fullpage.js
+
+## 📷 스크린샷
